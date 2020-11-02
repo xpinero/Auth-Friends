@@ -10,6 +10,7 @@ import {
 } from "react-router-dom";
 import LoginPage from './components/LoginPage';
 import FriendsPage from './components/FriendsPage';
+import PrivateRoute from './components/PrivateRoute';
 
 function App() {
   return (
@@ -26,7 +27,9 @@ function App() {
 
         <Switch>
           <Route path="/friends">
-            <FriendsPage />
+          <PrivateRoute>
+             <FriendsPage />
+          </PrivateRoute>
           </Route>
         
           <Route path="/">
