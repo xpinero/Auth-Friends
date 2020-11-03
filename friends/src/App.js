@@ -1,16 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
   Link,
-  useRouteMatch,
-  useParams
 } from "react-router-dom";
 import LoginPage from './components/LoginPage';
 import FriendsPage from './components/FriendsPage';
 import PrivateRoute from './components/PrivateRoute';
+import FriendsForm from './components/FriendsForm';
 
 function App() {
   return (
@@ -31,6 +29,8 @@ function App() {
              <FriendsPage />
           </PrivateRoute>
           </Route>
+
+        
         
           <Route path="/">
             <LoginPage />
